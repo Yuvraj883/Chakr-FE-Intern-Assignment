@@ -1,6 +1,6 @@
-import { LogOut } from 'lucide-react'
-import MenuCommand from './MenuCommand'
-import UserInfo from './UserInfo'
+import { LogOut } from 'lucide-react';
+import MenuCommand from './MenuCommand';
+import UserInfo from './UserInfo';
 
 const MySidebar = () => {
   return (
