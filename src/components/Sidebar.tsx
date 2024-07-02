@@ -11,7 +11,7 @@ const MySidebar = () => {
       <div className='grow py-2'>
         <MenuCommand />
       </div>
-      <div className='flex p-2 border-2 border-gray-200 cursor-pointer rounded-md gap-2 items-center justify-center'>
+      <div className='flex p-2 shadow-sm border-2 border-gray-200 cursor-pointer rounded-md gap-2 items-center justify-center'>
         Log out <LogOut className='mr-2 h-4 w-4' />
       </div>
     </nav>
