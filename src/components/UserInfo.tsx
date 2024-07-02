@@ -3,7 +3,7 @@ import Link from 'next/link'
 const UserInfo = () => {
   return (
     <Link href='/'>
-      <div className='p-2 flex gap-2 border-2 border-gray-200 rounded-md'>
+      <div className='p-2 flex gap-2 border-2 border-gray-200 rounded-md shadow-md'>
         <img
           src='/images/ChakrLogo.png'
           className='h-14 w-14 '
