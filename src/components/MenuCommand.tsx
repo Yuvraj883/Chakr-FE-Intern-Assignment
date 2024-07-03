@@ -36,7 +36,7 @@ export function MenuCommand() {
           shortKey: 'P',
         },
         {
-          link: '/companies',
+          link: '/',
           icon: <Building2 className='mr-2 h-4 w-4' />,
           text: 'Companies',
           shortKey: 'C',
