@@ -1,24 +1,25 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Tasks from "./Tasks";
 
-const TabsProspect = ()=>{
-  return(
-    <>
-  <Tabs defaultValue="account" className="w-[400px]">
-  <TabsList>
-    <TabsTrigger value="time-line">Time Line</TabsTrigger>
-    <TabsTrigger value="tasks">Tasks</TabsTrigger>
-    <TabsTrigger value="notes">Notes</TabsTrigger>
-    <TabsTrigger value="files">Files</TabsTrigger>
-    <TabsTrigger value="emails">Emails</TabsTrigger>
-    <TabsTrigger value="calendar">Calendar</TabsTrigger>
-
-
-  </TabsList>
-  <TabsContent value="account">Make changes to your account here.</TabsContent>
-  <TabsContent value="password">Change your password here.</TabsContent>
-</Tabs>
-
-    </>
-  )
+interface TabsProspectProps {
+  tasks: string[];
 }
-export default TabsProspect; 
+
+const TabsProspect: React.FC<TabsProspectProps> = ({ tasks }) => {
+  return (
+    <Tabs defaultValue="account" className="min-w-[100%]">
+      <TabsList>
+        <TabsTrigger value="time-line">Time Line</TabsTrigger>
+        <TabsTrigger value="tasks">Tasks</TabsTrigger>
+        <TabsTrigger value="notes">Notes</TabsTrigger>
+        <TabsTrigger value="files">Files</TabsTrigger>
+        <TabsTrigger value="emails">Emails</TabsTrigger>
+        <TabsTrigger value="calendar">Calendar</TabsTrigger>
+      </TabsList>
+      <TabsContent value="tasks"><Tasks tasks={tasks} /></TabsContent>
+      <TabsContent value="password">Change your password here.</TabsContent>
+    </Tabs>
+  );
+};
+
+export default TabsProspect;
